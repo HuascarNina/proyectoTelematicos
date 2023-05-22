@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_person"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+        android:id="@+id/view_person_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="36dp"
+        android:inputType="text"
+        android:hint="@string/hint_person_name" />
+
+    <ImageButton
+        android:id="@+id/button_person_add"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:padding="2dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_add"
+        android:scaleType="centerCrop" />
+
+    <ImageButton
+        android:id="@+id/button_person_remove"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:padding="2dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_remove"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>

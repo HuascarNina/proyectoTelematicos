@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tracker</string>
+
+    <string name="message_gps_permissions">¡La aplicación no tiene permisos de GPS!</string>
+
+    <string name="activity_title_create">Crear ubicación</string>
+    <string name="activity_title_edit">Editar ubicación</string>
+    <string name="activity_title_settings">Configuraciones</string>
+
+    <string name="dialog_title_create">Crear ubicación</string>
+    <string name="dialog_title_edit">Editar ubicación</string>
+    <string name="dialog_title_delete">Eliminar ubicación</string>
+    <string name="dialog_title_view">Detalles</string>
+    <string name="dialog_title_server_url">Server URL</string>
+    <string name="dialog_title_server_password">Server Password</string>
+    <string name="dialog_title_kml_export">KML Export</string>
+    <string name="dialog_title_help">Ayuda</string>
+    <string name="dialog_title_error">Error</string>
+
+    <string name="dialog_message_delete">¿Realmente quieres eliminar esta ubicación?</string>
+    <string name="dialog_message_help"><b>Tracker</b>. Una sencilla aplicación de Android de código abierto para registrar los lugares visitados.\n
+        \nDeveloped by: \n<b>Huascar Nina</b>\n<b>Angel Flores</b>\n<b>Fabian Almendro</b>\n<b>Jael Avendaño</b>\n<b>Melany Rodriguez</b>.</string>
+    <string name="dialog_message_missing_api_key">¡Falta la clave API de Google Maps!\n
+        \nEsta aplicación no funciona sin una clave API válida. Inserte la clave API en el archivo \'/app/src/main/res/values/keys.xml\'.</string>
+
+    <string name="action_create">Crear</string>
+    <string name="action_edit">Editar</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_settings">Configuraciones</string>
+    <string name="action_kml_export">Export as KML</string>
+    <string name="action_help">Ayuda</string>
+    <string name="action_ok">OK</string>
+    <string name="action_retry">Reintentar</string>
+    <string name="action_cancel">Cancelar</string>
+
+    <string name="category_general">General</string>
+    <string name="category_persons">Personas</string>
+
+    <string name="empty_locations">Sin ubicaciones.</string>
+    <string name="empty_persons">ninguno</string>
+
+    <string name="hint_name">Nombre</string>
+    <string name="hint_date">Fecha</string>
+    <string name="hint_description">Descripcion</string>
+    <string name="hint_person_name">Nombre</string>
+    <string name="hint_search">Buscar</string>
+    <string name="hint_server_url">Server URL</string>
+    <string name="hint_server_password">Server password</string>
+
+    <string name="error_location_name_invalid">Nombre incorrecto</string>
+    <string name="error_location_date_invalid">Fecha incorrecta</string>
+    <string name="error_location_description_invalid">Descripcion incorrecta</string>
+    <string name="error_location_person_name_invalid">Nombre incorrecto</string>
+    <string name="error_server_url_invalid">Invalid server URL</string>
+
+    <string name="error_unknown">¡Ocurrió un error desconocido!</string>
+    <string name="error_server_communication">¡La comunicación del servidor falló!</string>
+    <string name="error_server_unauthorized">¡La autorización del servidor falló!</string>
+    <string name="error_server_internal">¡Ocurrió un error de servidor desconocido!</string>
+    <string name="error_export_file_io">Could not write export file!</string>
+
+    <string name="day_monday">Mo</string>
+    <string name="day_tuesday">Tu</string>
+    <string name="day_wednesday">We</string>
+    <string name="day_thursday">Th</string>
+    <string name="day_friday">Fr</string>
+    <string name="day_saturday">Sa</string>
+    <string name="day_sunday">So</string>
+
+    <string name="pref_category_sync">Sync</string>
+    <string name="pref_category_info">Info</string>
+    <string name="pref_title_enable_sync">Sync locations</string>
+    <string name="pref_title_server_url">Server URL</string>
+    <string name="pref_title_server_password">Server password</string>
+    <string name="pref_title_version">Version</string>
+
+</resources>

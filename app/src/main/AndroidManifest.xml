@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kellnhofer.tracker">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".TrackerApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/launcher"
+        android:roundIcon="@mipmap/launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.App">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_api_key" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".view.LocationsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.CreateEditActivity"
+            android:parentActivityName=".view.LocationsActivity">
+        </activity>
+
+        <activity
+            android:name=".view.ViewActivity"
+            android:parentActivityName=".view.LocationsActivity">
+        </activity>
+
+        <activity
+            android:name=".view.SearchActivity"
+            android:parentActivityName=".view.LocationsActivity">
+        </activity>
+
+        <activity
+            android:name=".view.SettingsActivity"
+            android:parentActivityName=".view.LocationsActivity"
+            android:label="@string/activity_title_settings">
+        </activity>
+
+        <service android:name=".service.LocationService" />
+        <service android:name=".service.ExportService" />
+
+    </application>
+
+</manifest>

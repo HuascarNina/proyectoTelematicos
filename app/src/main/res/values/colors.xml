@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="launcher_background">#53A856</color>
+
+    <color name="primary">#FFFFFF</color>
+    <color name="primary_variant">#E8E8E8</color>
+    <color name="on_primary">#000000</color>
+    <color name="secondary">#53A856</color>
+    <color name="secondary_variant">#29542B</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="background">#FFFFFF</color>
+    <color name="on_background">#000000</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="on_surface">#000000</color>
+    <color name="error">#B00020</color>
+    <color name="on_error">#FFFFFF</color>
+
+    <color name="day_monday">#BDECF5</color>
+    <color name="day_tuesday">#B8EDE5</color>
+    <color name="day_wednesday">#D2EED3</color>
+    <color name="day_thursday">#E2F2CF</color>
+    <color name="day_friday">#F3F7CE</color>
+    <color name="day_saturday">#FFFACE</color>
+    <color name="day_sunday">#FFF0C1</color>
+
+</resources>

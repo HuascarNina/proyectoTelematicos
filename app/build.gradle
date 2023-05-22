@@ -1,0 +1,63 @@
+plugins {
+    id 'com.android.application'
+}
+
+def rootExt = rootProject.ext
+
+android {
+    compileSdkVersion rootExt.compileSdkVersion
+    buildToolsVersion rootExt.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootExt.minSdkVersion
+        targetSdkVersion rootExt.targetSdkVersion
+        versionCode rootExt.appVersionCode
+        versionName rootExt.appVersionName
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ['room.schemaLocation': getProjectDir().toString() + '/schemas']
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "env"
+    productFlavors {
+        production {
+            dimension "env"
+            applicationId rootExt.appId
+        }
+        development {
+            dimension "env"
+            applicationId rootExt.appId + '.develop'
+        }
+    }
+    compileOptions {
+        sourceCompatibility rootExt.javaVersion
+        targetCompatibility rootExt.javaVersion
+    }
+}
+
+def depVersions = rootExt.depVersions
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation "androidx.appcompat:appcompat:$depVersions.androidxAppcompat"
+    implementation "androidx.lifecycle:lifecycle-extensions:$depVersions.androidxLifecycle"
+    implementation "androidx.preference:preference:$depVersions.androidxPreference"
+    implementation "androidx.room:room-runtime:$depVersions.androidxRoom"
+    implementation "com.google.android.gms:play-services-maps:$depVersions.googleMaps"
+    implementation "com.google.android.material:material:$depVersions.googleMaterial"
+    implementation "com.squareup.retrofit2:retrofit:$depVersions.squareRetrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$depVersions.squareRetrofit"
+
+    developmentImplementation "com.facebook.flipper:flipper:$depVersions.facebookFlipper"
+    developmentImplementation "com.facebook.flipper:flipper-network-plugin:$depVersions.facebookFlipper"
+    developmentImplementation "com.facebook.soloader:soloader:$depVersions.facebookSoloader"
+
+    annotationProcessor "androidx.room:room-compiler:$depVersions.androidxRoom"
+}
