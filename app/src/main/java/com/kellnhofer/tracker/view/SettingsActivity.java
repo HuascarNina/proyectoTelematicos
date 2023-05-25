@@ -27,7 +27,6 @@ public class SettingsActivity extends BaseActivity implements SettingsContract.O
 
     private SettingsContract.Presenter mPresenter;
 
-    private SettingsFragment mFragment;
     private ErrorDialogFragment mSyncErrorDialogFragment;
 
     @Override
@@ -48,15 +47,6 @@ public class SettingsActivity extends BaseActivity implements SettingsContract.O
         MaterialToolbar topAppBar = findViewById(R.id.top_app_bar);
         topAppBar.setNavigationOnClickListener(v -> finish());
 
-        mFragment = (SettingsFragment) getSupportFragmentManager().findFragmentByTag(
-                FRAGMENT_TAG_SETTINGS);
-        if (mFragment == null) {
-            mFragment = new SettingsFragment();
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.container_content, mFragment, FRAGMENT_TAG_SETTINGS)
-                    .commit();
-        }
 
         if (savedInstanceState != null) {
             mSyncErrorDialogFragment = (ErrorDialogFragment) getSupportFragmentManager()
@@ -91,17 +81,17 @@ public class SettingsActivity extends BaseActivity implements SettingsContract.O
 
     private void initServerUrlPreference() {
         String url = mSettings.getServerUrl();
-        mFragment.updatePreferenceSummary(TrackerSettings.PREF_KEY_SERVER_URL, url);
+
     }
 
     private void initServerPasswordPreference() {
         String password = mSettings.getServerPassword();
-        mFragment.updatePreferenceSummary(TrackerSettings.PREF_KEY_SERVER_PASSWORD, password);
+
     }
 
     private void initVersionPreference() {
         String version = BuildConfig.VERSION_NAME;
-        mFragment.updatePreferenceSummary(TrackerSettings.PREF_KEY_VERSION, version);
+
     }
 
     // --- Fragment callback methods ---
@@ -142,7 +132,7 @@ public class SettingsActivity extends BaseActivity implements SettingsContract.O
     @Override
     public void onServerUrlDialogOk(String url) {
         mSettings.setServerUrl(url);
-        mFragment.updatePreferenceSummary(TrackerSettings.PREF_KEY_SERVER_URL, url);
+
     }
 
     @Override
@@ -159,7 +149,7 @@ public class SettingsActivity extends BaseActivity implements SettingsContract.O
     @Override
     public void onServerPasswordDialogOk(String password) {
         mSettings.setServerPassword(password);
-        mFragment.updatePreferenceSummary(TrackerSettings.PREF_KEY_SERVER_PASSWORD, password);
+
     }
 
     @Override

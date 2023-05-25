@@ -21,7 +21,7 @@
 
     <string name="dialog_message_delete">¿Realmente quieres eliminar esta ubicación?</string>
     <string name="dialog_message_help"><b>Tracker</b>. Una sencilla aplicación de Android de código abierto para registrar los lugares visitados.\n
-        \nDeveloped by: \n<b>Huascar Nina</b>\n<b>Angel Flores</b>\n<b>Fabian Almendro</b>\n<b>Jael Avendaño</b>\n<b>Melany Rodriguez</b>.</string>
+        \nDeveloped by: \n<b>Huascar Nina</b>\n<b>Angel Flores</b>\n<b>Fabian Almendro</b>\n<b>Jael Avendaño</b>\n<b>Melani Rodriguez</b>.</string>
     <string name="dialog_message_missing_api_key">¡Falta la clave API de Google Maps!\n
         \nEsta aplicación no funciona sin una clave API válida. Inserte la clave API en el archivo \'/app/src/main/res/values/keys.xml\'.</string>
 
