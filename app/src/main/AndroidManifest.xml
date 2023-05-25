@@ -48,12 +48,6 @@
             android:parentActivityName=".view.LocationsActivity">
         </activity>
 
-        <activity
-            android:name=".view.SettingsActivity"
-            android:parentActivityName=".view.LocationsActivity"
-            android:label="@string/activity_title_settings">
-        </activity>
-
         <service android:name=".service.LocationService" />
         <service android:name=".service.ExportService" />
 

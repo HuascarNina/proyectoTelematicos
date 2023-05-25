@@ -16,7 +16,6 @@ import com.kellnhofer.tracker.service.LocationServiceAdapter;
 import com.kellnhofer.tracker.service.LocationSyncError;
 import com.kellnhofer.tracker.view.CreateEditActivity;
 import com.kellnhofer.tracker.view.SearchActivity;
-import com.kellnhofer.tracker.view.SettingsActivity;
 import com.kellnhofer.tracker.view.ViewActivity;
 
 public class LocationsPresenter extends BasePresenter implements LocationsContract.Presenter,
@@ -104,7 +103,7 @@ public class LocationsPresenter extends BasePresenter implements LocationsContra
 
     @Override
     public void startSettingsActivity() {
-        mContext.startActivity(new Intent(mContext, SettingsActivity.class));
+
     }
 
     // --- Service callback methods ---
